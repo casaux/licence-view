@@ -15,13 +15,19 @@
 
          $(document).ready(function() {
 
+           $("#apple").bind("click",function(){
+               $("#wallet").css("display","block");
+           });
 
+            $("#wallet").bind("click",function(){
+                $(this).css("display","none");
+            });
 
          });
       </script>
       <style type="text/css">
          /* page specific css */
-
+         #wallet{position:absolute;top:0;left:0;z-index:99999;display:none;}
 
 
       </style>
@@ -38,6 +44,9 @@
             </div>
          </div>
          <div class="body">
+
+<div id="wallet"><img src="apple.png"></div>
+
 			<div class="banner">
 				<div class=container>
 					<div class="row">
@@ -72,8 +81,8 @@
 
                <div class="au-form-group casa-mobile-only">
 
-<a href="#"><img src="Add_to_Apple_Wallet_rgb_US-UK.svg"></a><br>
-<a href="#"><img src="Save to Google Pay - English (Dark).svg"></a>
+<div id="apple"><a href="#"><img src="Add_to_Apple_Wallet_rgb_US-UK.svg"></a><br></div>
+<!--<a href="#"><img src="Save to Google Pay - English (Dark).svg"></a>-->
 
 </div>
 
